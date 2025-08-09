@@ -1,0 +1,15 @@
+{
+  "name": "@equilock/contracts",
+  "version": "1.0.0",
+  "description": "Clarity smart contracts for EquiLock platform",
+  "scripts": {
+    "dev": "clarinet console",
+    "test": "clarinet test",
+    "check": "clarinet check",
+    "deploy:testnet": "clarinet deploy --testnet",
+    "deploy:mainnet": "clarinet deploy --mainnet"
+  },
+  "devDependencies": {
+    "@hirosystems/clarinet-cli": "^2.0.0"
+  }
+}

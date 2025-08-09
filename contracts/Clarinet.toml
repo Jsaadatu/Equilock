@@ -1,0 +1,38 @@
+[project]
+name = "equilock-contracts"
+description = "Smart contracts for EquiLock tokenized private equity platform"
+authors = ["EquiLock Team"]
+telemetry = false
+cache_dir = "./.clarinet/cache"
+requirements = []
+
+[contracts.equity-token]
+path = "contracts/equity-token.clar"
+clarity_version = 2
+epoch = "2.4"
+
+[contracts.governance]
+path = "contracts/governance.clar"
+clarity_version = 2
+epoch = "2.4"
+
+[contracts.kyc-registry]
+path = "contracts/kyc-registry.clar"
+clarity_version = 2
+epoch = "2.4"
+
+[contracts.secondary-market]
+path = "contracts/secondary-market.clar"
+clarity_version = 2
+epoch = "2.4"
+
+[[project.requirements]]
+contract_id = "SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard"
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
