@@ -80,3 +80,6 @@ temp/
 *.pem
 *.key
 !mock*.key
+
+# Kiro IDE settings
+.kiro/
