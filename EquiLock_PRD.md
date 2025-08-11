@@ -1,5 +1,7 @@
 # Product Requirements Document (PRD)
+
 ## Project: EquiLock
+
 **Specialist Team Exploring Tokenized Private Equity Trading on Blockchain**
 
 ---
@@ -9,6 +11,7 @@
 **EquiLock** is an innovative platform focused on the **tokenization of private equity shares** and their compliant trading on **DLT-based secondary markets**. Leveraging the **Stacks Blockchain** and smart contracts, EquiLock aims to bridge traditional private equity with emerging decentralized markets, aligning with evolving **DLT Pilot Regime regulations**, **MiCA**, and **DORA** requirements.
 
 The platform enables:
+
 - Secure issuance of **tokenized equity shares** representing real ownership.
 - Regulated secondary trading within the framework of **DLT market infrastructures**.
 - End-to-end compliance with **KYC**, **AML**, and market abuse prevention measures.
@@ -21,12 +24,13 @@ The platform enables:
 1. **Tokenize Private Equity Shares**
    - Represent equity ownership through blockchain-based tokens.
    - Provide holders with legal shareholder rights (dividends, voting, etc.).
-   
 2. **Enable Compliant Secondary Market Trading**
+
    - Integrate with DLT secondary market rules under the **EU DLT Pilot Regime**.
    - Facilitate liquidity without breaching current securities regulations.
 
 3. **Ensure Regulatory Compliance**
+
    - Implement KYC/AML, whitelisting, and identity verification.
    - Embed market abuse detection, transparency, and operational resilience.
 
@@ -48,23 +52,28 @@ The platform enables:
 ## 4. Key Features
 
 ### 4.1 Tokenized Equity Issuance
+
 - Smart contract-based equity tokens on **Stacks Blockchain**.
 - Legal binding via SPV (Special Purpose Vehicle) structure.
 - Whitelist-based token distribution to verified investors.
 
 ### 4.2 Compliant Secondary Market Integration
+
 - Support for **P2P trading** and future integration with regulated DLT MTFs (Multilateral Trading Facilities).
 - On-chain settlement with off-chain regulatory reporting.
 
 ### 4.3 KYC/AML Compliance
+
 - **Supabase Auth** + **Civic** or **Onfido** for verification.
 - Role-based permissions for investors, issuers, and operators.
 
 ### 4.4 Governance & Shareholder Rights
+
 - Voting rights executed via DAO-like governance modules.
 - Dividend distribution on-chain via stablecoin payouts.
 
 ### 4.5 Security & Auditability
+
 - Formal verification for smart contracts.
 - Continuous blockchain security monitoring.
 
@@ -83,31 +92,37 @@ The platform enables:
 ## 6. Technology Stack
 
 ### 6.1 Blockchain Layer
+
 - **Stacks Blockchain** (Clarity smart contracts)
 - Bitcoin settlement layer integration (for finality and security)
 
 ### 6.2 Smart Contracts
+
 - Language: **Clarity** (Stacks)
 - Tools: **Clarinet** for local development & testing
 - Auditing: **Hacken** or **CertiK**
 
 ### 6.3 Backend & APIs
+
 - **Node.js** + **NestJS** (modular, scalable backend)
 - **PostgreSQL** (via Supabase)
 - **Nodely Unlimited API** for blockchain & off-chain data
 - **GraphQL** API for frontend queries
 
 ### 6.4 Frontend
+
 - **Next.js** + **TailwindCSS**
 - **ShadCN/UI** for modern components
 - **Wagmi** + **Stacks.js** for wallet integration
 
 ### 6.5 Identity & Compliance
+
 - **Supabase Auth** for authentication
 - **Civic Pass** / **Onfido** for KYC
 - **Chainalysis KYT** for anti-money laundering checks
 
 ### 6.6 Infrastructure & DevOps
+
 - Hosting: **Vercel** (frontend), **AWS Fargate** (backend)
 - CI/CD: **GitHub Actions**
 - Monitoring: **Prometheus + Grafana**, **Sentry**
@@ -118,7 +133,7 @@ The platform enables:
 ## 7. System Architecture
 
 ```plaintext
-[User] 
+[User]
    │
    ▼
 [Frontend: Next.js + Stacks.js]
@@ -143,25 +158,30 @@ Off-chain Services:
 ## 8. Development Plan
 
 ### Phase 1 — Research & Compliance Framework (Month 1-2)
+
 - Regulatory analysis of DLT Pilot regime applicability.
 - Design legal structure (SPV, shareholder agreements).
 - Security & audit strategy definition.
 
 ### Phase 2 — Core Infrastructure & Smart Contracts (Month 3-4)
+
 - Build Clarity smart contracts for equity issuance.
 - Implement KYC/AML pipeline.
 - Develop backend API & database models.
 
 ### Phase 3 — Frontend & Wallet Integration (Month 5-6)
+
 - Build responsive investor dashboard.
 - Integrate Stacks wallet connection.
 - Implement token purchase & governance features.
 
 ### Phase 4 — Secondary Market Prototype (Month 7-8)
+
 - Implement P2P trading functionality.
 - Simulate regulatory reporting workflows.
 
 ### Phase 5 — Security Audit & Go-Live (Month 9)
+
 - Complete external security audit.
 - Deploy to production.
 - Onboard first issuers & investors.

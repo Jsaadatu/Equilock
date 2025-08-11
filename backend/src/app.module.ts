@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { TokenModule } from './modules/token/token.module';
 
 @Module({
   imports: [
@@ -12,11 +13,11 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
       driver: ApolloDriver,
       autoSchemaFile: true,
       playground: process.env.NODE_ENV !== 'production',
+      context: ({ req }) => ({ req }),
     }),
-    // TODO: Add feature modules
+    TokenModule,
+    // TODO: Add additional feature modules
     // - AuthModule (Supabase integration)
-    // - KycModule (KYC/AML compliance)
-    // - TokenModule (Equity token management)
     // - TradingModule (Secondary market)
     // - GovernanceModule (Voting and dividends)
   ],
