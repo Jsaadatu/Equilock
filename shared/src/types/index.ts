@@ -60,3 +60,91 @@ export enum TradeStatus {
   CANCELLED = 'cancelled',
   FAILED = 'failed',
 }
+
+// New types for token issuance workflow
+export interface TokenIssuanceRequest {
+  recipient: string;
+  amount: string;
+  legalDocumentHash: string;
+}
+
+export interface KycUpdateRequest {
+  userAddress: string;
+  status: string;
+  tier: number;
+  expiresAt?: number;
+}
+
+export interface WhitelistRequest {
+  userAddress: string;
+  approved: boolean;
+}
+
+export interface DividendDeclarationRequest {
+  totalAmount: string;
+  paymentDeadline: number;
+}
+
+export interface ContractCallResult {
+  success: boolean;
+  txOptions?: any;
+  error?: string;
+  estimatedFee?: number;
+}
+
+export interface TokenInfo {
+  name: string;
+  symbol: string;
+  decimals: number;
+  totalSupply: string;
+  maxSupply: string;
+  issuanceActive: boolean;
+  legalDocumentHash: string;
+  issuerName: string;
+  holdingPeriod: number;
+  contractOwner: string;
+  tokenUri?: string;
+}
+
+export interface IssuanceRecord {
+  id: string;
+  recipient: string;
+  amount: string;
+  issuedAt: Date;
+  legalDocumentHash: string;
+  vestingSchedule?: number;
+}
+
+export interface KycApplication {
+  userId: string;
+  walletAddress: string;
+  personalInfo: {
+    firstName: string;
+    lastName: string;
+    dateOfBirth: string;
+    nationality: string;
+    address: {
+      street: string;
+      city: string;
+      state: string;
+      postalCode: string;
+      country: string;
+    };
+  };
+  investorType: 'retail' | 'accredited' | 'institutional';
+  complianceQuestions: {
+    isPoliticallyExposed: boolean;
+    hasCriminalHistory: boolean;
+    isUSPerson: boolean;
+    acceptsTerms: boolean;
+  };
+}
+
+export interface TransactionStatus {
+  txId: string;
+  status: string;
+  result?: any;
+  blockHeight?: number;
+  blockHash?: string;
+  fee?: number;
+}
